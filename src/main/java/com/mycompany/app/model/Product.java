@@ -6,7 +6,7 @@ public class Product {
     private String name;
 
     public Product(String name) {
-        if (name==null) throw new NullPointerException("A Product Can not have Null String Name");
+        if (name == null) throw new NullPointerException("A Product Can not have Null String Name");
         this.name = name;
     }
 

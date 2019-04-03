@@ -4,21 +4,21 @@ import java.util.HashMap;
 import java.util.Optional;
 
 public class Catalog {
-    private HashMap<Product,Integer> items = new HashMap<Product, Integer>();
+    private HashMap<Product, Integer> items = new HashMap<Product, Integer>();
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return items.isEmpty();
     }
 
     public Optional<Product> add(Product prduct, int price) {
-        if (prduct==null){
+        if ((prduct == null) || (price < 0)) {
             return Optional.empty();
         }
-        items.put(prduct,price);
+        items.put(prduct, price);
         return Optional.of(prduct);
     }
 
-    public int size(){
+    public int size() {
         return items.size();
     }
 

@@ -20,22 +20,22 @@ public class ProductTest {
     }
 
     @Test
-    public void Test01_ANewCreatedProduct1shouldHaveTheNameP1() {
+    public void test01_ANewCreatedProduct1shouldHaveTheNameP1() {
         assertThat(prduct1.getName()).isEqualTo("P1");
     }
 
     @Test(expected = NullPointerException.class)
-    public void Test02_AnewProductWithNullNameShouldThrowNullPointerExeption(){
+    public void test02_AnewProductWithNullNameShouldThrowNullPointerExeption() {
         new Product(null);
     }
 
     @Test
-    public void Test03_2ProductsWithTheSameNameShouldBeEqual(){
+    public void test03_2ProductsWithTheSameNameShouldBeEqual() {
         assertThat(prduct1).isEqualTo(prduct2);
     }
 
     @Test
-    public void Test04_2ProductsWithTheSameNameShouldHaveEqualHAscode(){
+    public void test04_2ProductsWithTheSameNameShouldHaveEqualHAscode() {
         assertThat(prduct1.hashCode()).isEqualTo(prduct2.hashCode());
     }
 }
